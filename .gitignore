@@ -1,0 +1,8 @@
+.vsconfig
+.idea/.idea.urp2/.idea/.gitignore
+.idea/
+.vs/
+Library/
+Temp/
+obj/
+Logs/
