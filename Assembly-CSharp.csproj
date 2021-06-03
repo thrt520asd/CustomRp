@@ -57,15 +57,17 @@
      <Compile Include="Assets\CustomRP\Example\MeshBall.cs" />
      <Compile Include="Assets\CustomRP\Example\PerObjectMaterialProperty.cs" />
      <Compile Include="Assets\CustomRP\Lighting.cs" />
+     <None Include="Assets\Shader\BRDF.hlsl" />
      <None Include="Assets\Shader\Lit.shader" />
      <None Include="Assets\Shader\UnityInput.hlsl" />
-     <None Include="Assets\Shader\LitPass2.hlsl" />
      <None Include="Assets\Shader\Surface.hlsl" />
      <None Include="Assets\Shader\Light.hlsl" />
      <None Include="Assets\Shader\Common.hlsl" />
      <None Include="Assets\Shader\LitPass.hlsl" />
      <None Include="Assets\Shader\Ulint.shader" />
+     <None Include="Assets\Shader\SimpleULint.hlsl" />
      <None Include="Assets\Shader\UnlitPass.hlsl" />
+     <None Include="Assets\Shader\SimpleULint.shader" />
      <None Include="Assets\Shader\Lighting.hlsl" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>E:/project/urp2/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

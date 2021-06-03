@@ -50,6 +50,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\CustomRP\Editor\CustomShaderGUI.cs" />
      <Compile Include="Assets\Editor\EditorShortcut.cs" />
  <Reference Include="UnityEditor.TestRunner">
  <HintPath>E:/project/urp2/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
