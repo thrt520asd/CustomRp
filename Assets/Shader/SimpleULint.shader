@@ -14,7 +14,7 @@
             Blend [_SrcBlend] [_DstBlend]
             HLSLPROGRAM
             #include "SimpleULint.hlsl"
-            #pragma target 3.5
+            #pragma multi_compile_instancing
             #pragma vertex SimpleULintVertext
             #pragma fragment SimpleULintFragment
             ENDHLSL

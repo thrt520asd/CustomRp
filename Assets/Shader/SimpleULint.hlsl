@@ -3,18 +3,40 @@
 
 #include "Common.hlsl"
 
-CBUFFER_START(UnityPerMaterial)
-float4 _BaseColor;
-CBUFFER_END
+// CBUFFER_START(UnityPerMaterial)
+// float4 _BaseColor;
+// CBUFFER_END
 
-float4 SimpleULintVertext(float3 positionOS : POSITION) : SV_POSITION
+
+struct Attributes
 {
-    return float4(positionOS,1.0);
+    float3 positionOS : POSITION;
+    UNITY_VERTEX_INPUT_INSTANCE_ID
+};
+
+struct Varyings
+{
+    float4 positionCS:SV_POSITION;
+    UNITY_VERTEX_INPUT_INSTANCE_ID
+};
+
+UNITY_INSTANCING_BUFFER_START(UnityPerMaterial)
+    UNITY_DEFINE_INSTANCED_PROP(float4,_BaseColor)
+UNITY_INSTANCING_BUFFER_END(UnityPerMaterial)
+
+Varyings SimpleULintVertext(Attributes input)
+{
+    Varyings output;
+    UNITY_SETUP_INSTANCE_ID(input);
+    UNITY_TRANSFER_INSTANCE_ID(input,output);
+    output.positionCS = TransformObjectToHClip(input.positionOS);
+    return output;
 }
 
-float4 SimpleULintFragment():SV_TARGET
+float4 SimpleULintFragment(Varyings input):SV_TARGET
 {
-    return _BaseColor;
+    UNITY_SETUP_INSTANCE_ID(input);
+    return UNITY_ACCESS_INSTANCED_PROP(UnityPerMaterial,_BaseColor);
 }
 
 #endif 

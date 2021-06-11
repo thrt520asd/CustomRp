@@ -57,6 +57,7 @@
      <Compile Include="Assets\CustomRP\Example\MeshBall.cs" />
      <Compile Include="Assets\CustomRP\Example\PerObjectMaterialProperty.cs" />
      <Compile Include="Assets\CustomRP\Lighting.cs" />
+     <Compile Include="Assets\SimpleMeshBall.cs" />
      <None Include="Assets\Shader\BRDF.hlsl" />
      <None Include="Assets\Shader\Lit.shader" />
      <None Include="Assets\Shader\UnityInput.hlsl" />

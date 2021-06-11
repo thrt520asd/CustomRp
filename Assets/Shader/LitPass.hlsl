@@ -40,7 +40,7 @@ Varyings LitPassVertex(Attributes input)
     UNITY_TRANSFER_INSTANCE_ID(input,output);
     float3 positionWS = TransformObjectToWorld(input.positionOS);
     output.positionWS = positionWS;
-    output.positionCS = TransformObjectToHClip(positionWS);
+    output.positionCS = TransformWorldToHClip(positionWS);
     float4 baseST = UNITY_ACCESS_INSTANCED_PROP(UnityPerMaterial,_BaseMap_ST);
     output.baseUV = input.baseUV*baseST.xy+baseST.zw;
     output.normalWS = TransformObjectToWorldNormal(input.normalOS);
